@@ -1,5 +1,4 @@
 # python_lst-tple
-# exercises on lists and tuples, tried to cover all the methods on lists and tuples
 ##Read me file will be having all the short cuts and theory about lists, tuples.
 ##when should we go for lists:
         If we want to represent a group of individual objects as a single entity where insertion order preserved and duplicates are allowed. lists is dynamic as on our requirement we can go for increasing and decreasing of the lists.
@@ -39,4 +38,36 @@ l1=[1,2,3,1,1,1,4,4,55,5,5]
 print(collections.Counter(l1))
 ##replacement of elements is possible with slice operator as well.
 s[:-1]=s2
-
+***************************Tuples*******************************************
+### to write a tuple that contain a single value, t1=(10,)
+### as the tuples are immutable, changing the tuples can be done by concatination operation and deleting can be done by slicing method or we can change it by converting tuple to list and after deleting an element again to tuple
+1. tuple1=(1,2,3,4,5)
+tuple[2:]+(7,)+tuple[3:]
+##conversion of tuples to string is:
+tuples1=("h", "a", "r", "i")
+str1="".join(tuples1)
+print(str1)
+2. tuple=(1,2,3,4,5,6,7)
+tuple[0:1]+tuple[2:] ## item 2(1st element will be removed as the slicing operator doesnot include end operator(0:1)
+###lists to tuples== tuple(list)
+3. tuple1=(1,2,3,4,5,6,7,8)
+list1=list(tuple1)
+list1.remove(1)
+tuple1=tuple(list1)
+print(tuple1)
+3. elements index can be found using index method
+tuple1=("hello world")
+print(tuple1.index("h"))
+print(tuple1.index("o", 2))## from where you want to check the elements
+print(tuple1.index("l", 4, 10))##from 4th to 10th element searching will be done
+4. convert tuple in to dictionary
+tuple1= ((1, "a"),(2, "b"))
+print(dict((y,x) for x, y in tuple1))
+just like in lists, reversing can be done with reversed function or slicing [::-1]
+1: tuple1=("hari krishna")                      ### print(tuple(tuple1[::-1]))
+x=reversed(tuple1)
+print(tuple(x))
+## remove empty tuples from list of tuples 
+x=[(), (), (a,b), (c,g,j), (h,a), (), (), (',), ("")]
+x=[t for t in x if t]
+print(x)
