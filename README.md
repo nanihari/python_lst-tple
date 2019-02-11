@@ -21,6 +21,11 @@ print(names)
 l1=[1,2,3,4]
 l2=[1,2,3,4,5,6]
 print((list(set(l1))))-(list(set(l2))))
+## while inserting an element into lists using insert(), if the index is out of range insertion can be done at the most possible place.
+n=[1,2,3,4,5]
+n.insert(10,777)##[1,2,3,4,5,777]
+n.insert(-10,777)##[777,1,2,3,4,5]
+### pop and remove will be deleting elements where as pop will take index element and remove will take element number.
 ### how to access index in a list:
 we have a method called enumerate
 l1=[1,2,4,5,6,7]
