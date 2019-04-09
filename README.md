@@ -15,7 +15,7 @@
 names=["hari", "krishna", "Iam", "from", "india"]       ### or we can take with pop and remove functions
 names=[x for (i,x) in enumerate(names) if i not in (0,4,5)]   #where pop will delete index element and remove will delete specific name
 print(names)
-## we have a module called shuffle to shuffle the list: shuffle(lst)
+## we have a method called shuffle to shuffle the list: shuffle(lst)
 ###difference between 2 lists:
 1 method: we can use sets                                                         
 l1=[1,2,3,4]
